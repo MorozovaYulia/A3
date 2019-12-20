@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+float a[1000][1000], s;
+int m, n, i, j;
+printf("Введите размер матрицы mxn: ");
+scanf("%d %d", &m, &n);
+srand(0);
+printf("Введите скаляр: ");
+scanf("%f", &s);
+for (i=0; i<m; i++)
+ 	{
+ 	for (j=0; j<n; j++)
+ 	{
+ 		a[i][j] = rand();
+ 		printf("%.1f \t", a[i][j]);
+ 	}
+printf("\n");
+}
+printf("\n");
+for (i=0; i<m; i++)
+ 	{
+ 	for (j=0; j<n; j++)
+ 		{
+ 		a[i][j] = a[i][j] * s;
+ 		printf("%.1f \t", a[i][j]);
+ 	}
+printf("\n");
+}
+return 0;
+}
